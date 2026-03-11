@@ -1,4 +1,4 @@
-# Student Pulse - Academic Risk Detector
+# The Academic Integrity Platform
 
 A modern, AI-driven academic intelligence platform designed to proactively identify students at risk.
 
