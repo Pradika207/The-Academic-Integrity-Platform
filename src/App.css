@@ -1,0 +1,225 @@
+/* 
+  ================================================================
+  ULTIMATE VISIBILITY & CONTRAST ENGINE (v4)
+  Final high-visibility overrides for the Student Detector project.
+  ================================================================
+*/
+
+/* 1. Global Background Reset */
+#root {
+  min-height: 100vh;
+  background-color: #010203 !important;
+}
+
+body {
+  background-color: #010203 !important;
+  color: #f8fafc !important;
+}
+
+/* 2. Nuclear Text Visibility - Force brightness everywhere */
+h1, h2, h3, h4, h5, h6, 
+p, span, div, label, 
+b, i, strong, small {
+  color: #f8fafc; 
+  opacity: 1 !important;
+}
+
+/* Force pure white for headings and critical titles */
+.logo-text, .card-title, .section-title, .result-name {
+  color: #ffffff !important;
+  font-weight: 950 !important;
+}
+
+/* 3. Button & Role Toggle Visibility */
+.login-overlay button.bg-primary {
+  background-color: #8b5cf6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4) !important;
+}
+
+/* 4. Quick Access Buttons Visibility Fix */
+/* These were appearing too bright in the screenshot */
+.quick-access-item {
+  background-color: rgba(30, 41, 59, 0.95) !important; /* Darker slate background */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Brighter border */
+  color: #ffffff !important;
+  padding: 0.75rem 1rem !important;
+}
+
+.quick-access-item:hover {
+  background-color: #1e293b !important;
+  border-color: #8b5cf6 !important;
+  transform: translateY(-2px);
+}
+
+.quick-access-item span {
+  color: #ffffff !important; /* Force white text */
+  font-weight: 900 !important;
+}
+
+/* 5. Glass Cards - Ensuring text doesn't blend into background */
+.glass-card {
+  background: rgba(10, 15, 25, 0.98) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* 6. Table Visibility (Monitoring Matrix) */
+.cohort-table th {
+  color: #ffffff !important;
+  background-color: #1e293b !important;
+  font-weight: 950 !important;
+  padding: 1.25rem !important;
+}
+
+.cohort-table td {
+  color: #f8fafc !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 7. Risk Alerts Visuals */
+.risk-card-high {
+  background: rgba(244, 63, 94, 0.15) !important;
+  border: 1px solid rgba(244, 63, 94, 0.4) !important;
+}
+
+.risk-card-medium {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+}
+
+.risk-card-low {
+  background: rgba(16, 185, 129, 0.05) !important;
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
+}
+
+/* 9. Universal Form Control Visibility */
+input, select, textarea {
+  background-color: #0A0F19 !important; /* Deep dark background */
+  color: #FFFFFF !important; /* Pure white text */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Visible border */
+  font-weight: 600 !important;
+}
+
+select option {
+  background-color: #0A0F19 !important;
+  color: #FFFFFF !important;
+}
+
+/* 10. Fix Action Buttons in Dashboard */
+/* Force solid colors for "Record Observation" and "Post Feedback" */
+button.bg-secondary {
+  background-color: #ec4899 !important; /* Pink/Secondary */
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+button.bg-primary {
+  background-color: #8b5cf6 !important; /* Purple/Primary */
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+button.bg-secondary:hover {
+  background-color: #db2777 !important;
+  transform: translateY(-2px);
+}
+
+button.bg-primary:hover {
+  background-color: #7c3aed !important;
+  transform: translateY(-2px);
+}
+
+/* Fix "Identify Portal" buttons specifically if needed */
+.login-overlay button {
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+/* History/Logs visibility */
+.glass-card p.text-white\/80 {
+  color: #f1f5f9 !important; /* Brighten history text */
+}
+
+/* Scrollbar Visibility (Dark Theme) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #010203;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* 11. Early Warning System Components */
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.risk-badge.high { background: #fee2e2 !important; color: #dc2626 !important; border: 1px solid #fecaca !important; }
+.risk-badge.medium { background: #ffedd5 !important; color: #ea580c !important; border: 1px solid #fed7aa !important; }
+.risk-badge.low { background: #dcfce7 !important; color: #16a34a !important; border: 1px solid #bbf7d0 !important; }
+
+.summary-stat-card {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.summary-stat-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.trend-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.trend-up { color: #10b981 !important; }
+.trend-down { color: #f43f5e !important; }
+.trend-stable { color: #94a3b8 !important; }
+
+.ai-reason-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #f1f5f9;
+  padding: 4px 0;
+}
+
+.ai-recommendation-box {
+  background: rgba(139, 92, 246, 0.05) !important;
+  border: 1px dashed rgba(139, 92, 246, 0.3) !important;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.animate-in {
+  animation: slideUp 0.5s ease-out forwards !important;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
